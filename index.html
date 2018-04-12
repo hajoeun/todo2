@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="todoapp">
+    <header class="header">
+      <h1>todos</h1>
+      <input class="new-todo" placeholder="What needs to be done?" autofocus>
+    </header>
+    <section class="main">
+      <input class="toggle-all" type="checkbox">
+      <label for="toggle-all">Mark all as complete</label>
+      <ul class="todo-list"></ul>
+    </section>
+    <footer class="footer">
+      <span class="todo-count"></span>
+      <ul class="filters">
+        <li>
+          <a href="#/" class="selected">All</a>
+        </li>
+        <li>
+          <a href="#/active">Active</a>
+        </li>
+        <li>
+          <a href="#/completed">Completed</a>
+        </li>
+      </ul>
+      <button class="clear-completed">Clear completed</button>
+    </footer>
+  </section>
+  <footer class="info">
+    <p>Created by
+      <a href="http://twitter.com/oscargodson">Oscar Godson</a>
+    </p>
+    <p>Refactored by
+      <a href="https://github.com/joeunha">Joeun Ha</a>
+    </p>
+    <p>Part of
+      <a href="http://todomvc.com">TodoMVC</a>
+    </p>
+  </footer>
+
+  <script src="./lib/partial.js"></script>
+  <script src="./lib/don.js"></script>
+  <script src="./lib/ttl-pug.js"></script>
+  <script src="//www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyD5hQSjP8moh2tXtdVFwpJr1QZ4UiGepXE",
+      authDomain: "functional-todo-app.firebaseapp.com",
+      databaseURL: "https://functional-todo-app.firebaseio.com",
+      projectId: "functional-todo-app",
+      storageBucket: "functional-todo-app.appspot.com",
+      messagingSenderId: "959929292761"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
